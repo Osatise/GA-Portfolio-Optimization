@@ -33,7 +33,7 @@ sharpe_ratio <- function(weights) {
   portfolio_return <- colSums(Stocks * weights)
   portfolio_sd <- sqrt(t(weights) %*% cov(Stocks) %*% weights)
   sharpe <- (portfolio_return - 0.0339) / portfolio_sd
-  return(-sharpe)
+  return(sharpe)
 }
 
 maxGenerations <<- 20
